@@ -9,15 +9,15 @@
 include_once('FizzBuzz.php');
 use PHPUnit\Framework\TestCase;
 
-class FizzBuzzTest extends TestCase
+class FizzBuzzTest extends FizzBuzz
 {
     public function testFizz3()
     {
         $number = 3;
         $expected = "Fizz";
 
-        $result = new FizzBuzz($number);
-        $this->assertEquals($expected, $result);
+        return $result = new FizzBuzz($number);
+//        $this->assertEquals($expected, $result);
     }
 
     public function testFizz6()
@@ -25,8 +25,8 @@ class FizzBuzzTest extends TestCase
         $number = 6;
         $expected = "Fizz";
 
-        $result = new FizzBuzz($number);
-        $this->assertEquals($expected, $result);
+        return $result = new FizzBuzz($number);
+//        $this->assertEquals($expected, $result);
     }
 
     public function testFizz5()
@@ -34,8 +34,8 @@ class FizzBuzzTest extends TestCase
         $number = 5;
         $expected = "Buzz";
 
-        $result = new FizzBuzz($number);
-        $this->assertEquals($expected, $result);
+        return $result = new FizzBuzz($number);
+//        $this->assertEquals($expected, $result);
     }
 
     public function testFizz15()
@@ -43,8 +43,8 @@ class FizzBuzzTest extends TestCase
         $number = 15;
         $expected = "FizzBuzz";
 
-        $result = new FizzBuzz($number);
-        $this->assertEquals($expected, $result);
+        return $result = new FizzBuzz($number);
+//        $this->assertEquals($expected, $result);
     }
 
     public function testFizz7()
@@ -52,7 +52,9 @@ class FizzBuzzTest extends TestCase
         $number = 7;
         $expected = $number."";
 
-        $result = new FizzBuzz($number);
-        $this->assertEquals($expected, $result);
+        return $result = new FizzBuzz($number);
+//        $this->assertEquals($expected, $result);
     }
 }
+
+echo $fizzbuzztest = new FizzBuzzTest(3);
